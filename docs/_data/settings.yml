@@ -1,5 +1,5 @@
 basic_settings:
-  site_title: Argon Jekyll Theme
+  site_title: Dialedin
   favicon_image: /assets/img/favicon.png
 
 header_settings:
@@ -58,8 +58,8 @@ menu_settings:
     #  - title: List Example
      #   url: /blog-list-example
       #  icon: ni-bullet-list-67 text-default    
-    - title: 'About'
-      url: '/about'
+    # - title: 'About'
+    #   url: '/about'
     - title: 'Contact'
       url: '/contact'
 

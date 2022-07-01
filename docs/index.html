@@ -1,25 +1,15 @@
 ---
 title: Home
 layout: default
-description: Use the Argon Jekyll theme to build a landing page, blog or complete website.
+description: DialedIn are an australian smart home automation startup, specialising in open source platforms.
+keywords: Home Assistant Tasmota ESPHome Wifi Zigbee Zigbee2mqtt wireless sensors humidity temperature motion power socket Smart Home Automation Australia
 featured_image: /assets/img/social.jpg
 ---
 
 <!--Replace this page with your landing page content -->
 {% if site.data.settings.home_settings.theme == "landing" %}
-  {% include home-sample.html %}
-  <div class="features-7 fullWidth contentWrapper">
-    <div class="container mb-2">
-    <div class="row">
-        <div class="col-md-8 text-center mx-auto">
-            <h3 class="display-2">Blog</h3>
-            <p class="lead pb-5">The latest posts from our blog</p>
-        </div>
-    </div>
-    
-    </div>
-  </div>
-  {% include blogsHome.html %}
+  {% include home-dialedin.html %}
+
 {% endif %}
 
 {% if site.data.settings.home_settings.theme == "blog" %}
