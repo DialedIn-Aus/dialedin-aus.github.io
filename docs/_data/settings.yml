@@ -64,7 +64,7 @@ menu_settings:
       url: '/contact'
 
 footer_settings:
-  footer_tagline: Contact timp@dialedin.com.au
+  footer_tagline: Contact info@dialedin.com.au
 
 contact_settings:
   form_action: 'https://formspree.io/f/mwkyjpkd'
@@ -82,20 +82,9 @@ social_settings:
   tumblr_url: ''
   dribbble_url: ''
   behance_url: ''
-  github_url: 'https://github.com/DialedIn-Aus'
+ #  github_url: 'https://github.com/DialedIn-Aus'
   reddit_url: ''
   linkedin_url: ''
-
-authors:
-  tom:
-    name: Tom
-    picture: /assets/img/faces/team-1.jpg
-  jane:
-    name: Jane
-    picture: /assets/img/faces/team-4.jpg
-  michael:
-    name: Michael
-    picture: /assets/img/faces/michael.jpg
 
 advanced_settings:
   analytics_code: 
