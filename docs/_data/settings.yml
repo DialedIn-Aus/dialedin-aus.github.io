@@ -1,6 +1,7 @@
 basic_settings:
   site_title: Dialedin
   favicon_image: /assets/img/favicon.png
+  dialedin_logo: /assets/img/dialed/dial2.svg
 
 header_settings:
   logo_image: /assets/img/dialed/dial2.svg
