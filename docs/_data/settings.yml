@@ -62,7 +62,7 @@ menu_settings:
     # - title: 'About'
     #   url: '/about'
     - title: 'Contact'
-      url: '/contact'
+      url: '#contact1'
 
 footer_settings:
   footer_tagline: Contact Us
