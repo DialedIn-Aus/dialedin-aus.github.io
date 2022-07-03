@@ -65,7 +65,7 @@ menu_settings:
       url: '/contact'
 
 footer_settings:
-  footer_tagline: Contact info@dialedin.com.au
+  footer_tagline: Contact Us
 
 contact_settings:
   form_action: 'https://formspree.io/f/mwkyjpkd'
