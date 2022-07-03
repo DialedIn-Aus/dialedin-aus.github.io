@@ -64,7 +64,7 @@ menu_settings:
     #   url: '/about'
 
 footer_settings:
-  footer_tagline: Contact Us
+  footer_tagline:
 
 contact_settings:
   form_action: 'https://formspree.io/f/mwkyjpkd'
