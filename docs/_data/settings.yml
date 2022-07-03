@@ -34,10 +34,11 @@ blog_settings:
 menu_settings:
   menu_items:
     - title: 'Home'
-      submenu_items:
-      - title: Landing Page
-        url: /
-        icon: ni-spaceship text-success    
+      url: /
+      icon: 'ni-shop'
+    - title: 'Contact'
+      url: '#contact1'
+      icon: 'ni-delivery-fast'
      # - title: Blog
       #  url: /blog
        # icon: ni-books text-primary
@@ -61,8 +62,6 @@ menu_settings:
       #  icon: ni-bullet-list-67 text-default    
     # - title: 'About'
     #   url: '/about'
-    - title: 'Contact'
-      url: '#contact1'
 
 footer_settings:
   footer_tagline: Contact Us
