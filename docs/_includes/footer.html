@@ -87,7 +87,11 @@
 <!-- Plugin for Headrom, full documentation here: https://wicky.nillia.ms/headroom.js/ -->
 <script src="{{ "/assets/js/plugins/headroom.min.js" | relative_url }}"></script>
 <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
-
+<!-- Smooth Scrolling -->
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
 <script>
   // Blog Post Carousel
   if (document.querySelector('.blogGlide') !== null) {
