@@ -1,32 +1,36 @@
 <footer class="footer mt-5 pt-4">
   <div class="container">
-    <div class="row row-grid align-items-center my-2">
-      <div class="col-lg-6 text-center">
-        <h4 class="mb-3 font-weight-light">{{ site.data.settings.footer_settings.footer_tagline }}</h4>
-      </div>
-    </div>
-    <div class="row row-grid contactus-3 align-items-center mb-2 mt-2">
+    <div class="row row-grid align-items-center mb-2 mt-2">
       <div class="col-lg-6 text-lg-left">
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="info info-hover">
-              <div class="icon icon-shape icon-shape-primary icon-lg shadow rounded-circle text-primary">
-                <i class="ni ni-square-pin"></i>
+        <ul class="list-unstyled mt-5">
+          <li class="py-2">
+            <h4 class="mb-3 font-weight-light">{{ site.data.settings.footer_settings.footer_tagline }}</h4>
+          </li>
+          <li class="py-2">
+            <div class="d-flex align-items-center">
+              <div>
+                <div class="badge badge-circle badge-primary mr-3">
+                  <i class="ni ni-square-pin"></i>
+                </div>
               </div>
-              <h4 class="info-title">Location</h4>
-              <p class="description px-0">Melbourne, Australia</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <div class="info info-hover">
-              <div class="icon icon-shape icon-shape-primary icon-lg shadow rounded-circle text-primary">
-                <i class="ni ni-email-83"></i>
+              <div>
+                <h6 class="mb-0">Melbourne, Australia</h6>
               </div>
-              <h4 class="info-title">Email</h4>
-              <p class="description px-0">info@dialedin.com.au</p>
             </div>
-          </div>
-      </div>
+          </li>
+          <li class="py-2">
+            <div class="d-flex align-items-center">
+              <div>
+                <div class="badge badge-circle badge-primary mr-3">
+                  <i class="ni ni-email-83"></i>
+                </div>
+              </div>
+              <div>
+                <h6 class="mb-0">Email: info@dialedin.com.au</h6>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class="col-lg-6 text-lg-right">
         {% include socials.html %}
