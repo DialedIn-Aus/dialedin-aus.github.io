@@ -1,3 +1,17 @@
 .connext {
     margin-bottom: 30px;
-  }
+}
+
+.dtable {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+ul#h-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+}
+
+ul#h-list li {
+  display: inline;
+}
