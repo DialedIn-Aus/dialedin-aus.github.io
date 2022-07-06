@@ -2,16 +2,31 @@
     margin-bottom: 30px;
 }
 
-.dtable {
-	display: table;   /* Allow the centering to work */
-	margin: 0 auto;
-}
-ul#h-list {
-	min-width: 696px;
-	list-style: none;
-	padding-top: 20px;
+
+
+@media (max-width: 576px) {
+	.iot-logos {
+		flex-direction: column;
+	}
+
+	.iot-logos .card-body {
+		display:block;
+		text-align: center;
+		padding: 1em;
+	}
+	.iot-logos img {
+		max-width: 30%;
+	}
 }
 
-ul#h-list li {
-  display: inline;
+@media (min-width: 768px) {
+	.iot-logos img {
+		max-width: 100%;
+	}
+ }
+
+@media (min-width: 992px) {
+	.iot-logos img {
+		max-width: 80%;
+	}
 }
