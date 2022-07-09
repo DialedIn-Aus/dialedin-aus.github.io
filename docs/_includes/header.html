@@ -11,7 +11,7 @@
         <div class="container">
           {% if site.data.settings.header_settings.logo_image %}
           <a href="{{ site.baseurl }}/" class="navbar-brand mr-lg-5">
-            <img src="{{ site.data.settings.header_settings.logo_image | relative_url }}">
+            <img src="{{ site.data.settings.header_settings.logo_image | relative_url }}" alt="Dialedin Logo">
           </a>
           {% else %}
           <a href="{{ site.baseurl }}/" class="navbar-brand mr-lg-5">
@@ -29,11 +29,11 @@
                 <div class="col-6 collapse-brand">
                   {% if site.data.settings.header_settings.mobile_logo_image %}
                   <a href="{{ site.baseurl }}/">
-                    <img src="{{ site.data.settings.header_settings.mobile_logo_image | relative_url }}">
+                    <img src="{{ site.data.settings.header_settings.mobile_logo_image | relative_url }}" alt="logo">
                   </a>
                   {% elsif site.data.settings.header_settings.logo_image %}
                   <a href="{{ site.baseurl }}/">
-                    <img src="{{ site.data.settings.header_settings.logo_image | relative_url }}">
+                    <img src="{{ site.data.settings.header_settings.logo_image | relative_url }}" alt="logo">
                   </a>
                   {% else %}
                   <a class="navbar-brand" href="{{ site.baseurl }}/">
