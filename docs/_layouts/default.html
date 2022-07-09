@@ -47,7 +47,8 @@
 
   gtag('config', '{{ site.data.settings.advanced_settings.analytics_code }}');
 </script>
-
+<!-- Bing Tracking -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"27026602"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
   {% endif %}
 
   {% if site.data.settings.advanced_settings.header_js %}
