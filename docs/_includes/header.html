@@ -65,7 +65,7 @@
                       {% endfor %}
                     </div>
                   </li>
-                {% else %}
+                {% elsif item.title != 'Home' %}
                   <li class="nav-item">
                     <a href="{{ item.url | relative_url }}" class="nav-link">
                       <span class="nav-link-inner--text"><i class="ni {{ item.icon }}"></i>{{ item.title }}</span>
