@@ -37,11 +37,15 @@ menu_settings:
       url: '#home'
       icon: 'ni-shop'
     - title: 'Shop'
-      url: 'https://www.ebay.com.au/str/dialedinaus'
+      url: 'https://shop.dialedin.com.au'
       icon: 'ni-cart'
+    - title: 'eBay'
+      url: 'https://www.ebay.com.au/str/dialedinaus'
+      icon: 'ni-basket'
     - title: 'Contact'
       url: '#contact1'
-      icon: 'ni-delivery-fast'
+      icon: 'ni-send'
+      #icon: 'ni-delivery-fast'
      # - title: Blog
       #  url: /blog
        # icon: ni-books text-primary
