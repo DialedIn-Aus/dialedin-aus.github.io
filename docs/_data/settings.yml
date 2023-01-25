@@ -42,13 +42,14 @@ menu_settings:
     - title: 'eBay'
       url: 'https://www.ebay.com.au/str/dialedinaus'
       icon: 'ni-basket'
+    - title: Blog
+      url: /blog
+      icon: ni-books
     - title: 'Contact'
       url: '#contact1'
       icon: 'ni-send'
       #icon: 'ni-delivery-fast'
-     # - title: Blog
-      #  url: /blog
-       # icon: ni-books text-primary
+
    # - title: 'Features'
     #  url: '/features'     
    # - title: Pricing
