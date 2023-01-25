@@ -97,11 +97,11 @@
   // Blog Post Carousel
   if (document.querySelector('.blogGlide') !== null) {
     new Glide('.blogGlide', {
-      type: 'carousel',
+      type: 'slider',
       startAt: 0,
-      focusAt: 2,
+      focusAt: 'center',
       perTouch: 1,
-      perView: 4
+      perView: 3
     }).mount();
   }
 
