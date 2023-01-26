@@ -7,9 +7,9 @@ featured_image: /assets/img/sections/twk-tt.jpg
 categories: tasmota
 ---
 
-If you have purchased a device pre-flashed with Tasmota firmware, then the first thing you are going to want to do is get it connected to your network. If you are looking to newly flash a supported device and convert it to Tasmota, that is beyond the scope of this guide and should should refer to the [official documentation](https://tasmota.github.io/docs/Getting-Started/).
+If you have purchased a device pre-flashed with Tasmota firmware, then the first thing you are going to want to do is get it connected to your network. If you are looking to newly flash a supported device and convert it to Tasmota, that is beyond the scope of this guide and you should refer to the [official documentation](https://tasmota.github.io/docs/Getting-Started/).
 
-When you first power up a Tasmota device it will be in access point mode, it will broadcast its own WiFi network that you can connect to and configure your WiFi. So grab your phone or your laptop and look for a WiFi network called `tasmota-xxxxxx-####` where the ‘xxxxxx’s will be replaced by a seemingly random string of numbers and letters, that uniquely identifies that Tasmota device.
+When you first power up a Tasmota device it will be in access point mode, it will broadcast its own WiFi network that you can connect to and configure your WiFi details. So grab your phone or your laptop and look for a WiFi network called `tasmota-xxxxxx-####` where the ‘xxxxxx’s will be replaced by a seemingly random string of numbers and letters, that uniquely identifies that Tasmota device.
 
 <img src='../assets/img/blog/tasmota-wifi-ap.png' alt="tasmota AP example" width="50%" style="display: block; margin: 0 auto">
 
@@ -32,7 +32,7 @@ All Tasmota devices have a simple web UI running on the device, you can use this
 If you ever need to reset your device to the firmware defaults, there are a few options available. This may be necessary if you are unable to access the Tasmota UI due to an error in the configuration, or if you need to change the WiFi credentials to connect to a different network.
 1. If your device has a reset button, press and hold this button for atleast 40 secs, the device will then reset and should be power cycled to complete the process.
 2. For devices without a reset button or if the above doesnt work, you can use the quick power cycle reset. Power down for the device for 30 secs, then quickly power cycle the device 6 times within 10 secs each time. After this the device will restart and be reset back to firmware defaults.
-3. If you still have access to the Web UI, you can also complete a reset in the Tasmota console. From the menu select *consoles->console* then enter the command `reset 1` and hit enter.
+3. If you still have access to the Web UI, you can also complete a reset in the Tasmota console. From the menu select `consoles`->`console` then enter the command `reset 1` and hit enter.
 
 ##### Links
 
