@@ -2,6 +2,7 @@
 layout: post
 title:  "Setup the Sonoff ZBBridge-P on Home Assistant with ZHA"
 date:   2023-01-25 13:38:43 +1000
+last_modified_at: 2023-01-26 22:01:21 +1100
 description: Adding the Sonoff Zigbee Bridge Pro with Tasmota to your Home Assistant setup, brings support for a wide range of Zigbee devices. Learn all about getting setup here.
 featured_image: /assets/img/sections/mark-harrison.jpg
 categories: tasmota

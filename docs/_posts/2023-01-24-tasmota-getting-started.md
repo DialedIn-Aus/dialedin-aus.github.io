@@ -2,6 +2,7 @@
 layout: post
 title:  "Getting Started with Tasmota"
 date:   2023-01-23 15:28:43 +1000
+last_modified_at: 2023-01-26 22:01:21 +1100
 description: Purchasd a pre-flashed Tasmota device? Then this guide will help you get started and get the device connected to your network.
 featured_image: /assets/img/sections/twk-tt.jpg
 categories: tasmota
