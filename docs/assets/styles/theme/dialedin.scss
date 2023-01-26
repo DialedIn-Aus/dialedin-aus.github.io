@@ -2,7 +2,11 @@
     margin-bottom: 30px;
 }
 
-
+.blog-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
 @media (max-width: 576px) {
 	.iot-logos {
