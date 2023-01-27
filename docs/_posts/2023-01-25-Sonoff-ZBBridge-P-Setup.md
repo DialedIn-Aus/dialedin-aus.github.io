@@ -5,7 +5,9 @@ date:   2023-01-25 13:38:43 +1000
 last_modified_at: 2023-01-26 22:01:21 +1100
 description: Adding the Sonoff Zigbee Bridge Pro with Tasmota to your Home Assistant setup, brings support for a wide range of Zigbee devices. Learn all about getting setup here.
 featured_image: /assets/img/sections/mark-harrison.jpg
-categories: tasmota
+categories:
+  - Tasmota
+  - Home Assitant
 ---
 
 The Sonoff Zigbee Bridge Pro, when flashed with Tasmota, seamlessly integrates Zigbee with your favourite home automation platform. By adding a Zigbee gateway to your setup you can enjoy support for many different Zigbee devices from most of the different brands on the market including Sonoff, Aqara, IKEA, Tuya and many more. This guide assumes you have purchased a device pre-flashed with Tasmota and will run through the setup on Home Assistant using ZHA. 
@@ -14,7 +16,7 @@ The Sonoff Zigbee Bridge Pro, when flashed with Tasmota, seamlessly integrates Z
 Purchase ZBBridge-P Tasmota now</a>
 
 ### Tasmota Configuration
-First, you will need to connect Tasmota to your WiFi and get the IP address of the ZBBridge-P. If you are new to Tasmota then you can find out all about how to do this in our [Getting Started Guide](tasmota-getting-started). Now conect to the Tasmota UI on the ZBBridge-P, we are going to load up the auto-configuration for TCP Serial Bridge mode which is used for integration with ZHA, Zigpy or Zigbee2MQTT.
+First, you will need to connect Tasmota to your WiFi and get the IP address of the ZBBridge-P. If you are new to Tasmota then you can find out all about how to do this in our [Getting Started Guide]({% post_url 2023-01-24-tasmota-getting-started %}). Now conect to the Tasmota UI on the ZBBridge-P, we are going to load up the auto-configuration for TCP Serial Bridge mode which is used for integration with ZHA, Zigpy or Zigbee2MQTT.
 
 From the menu navigate to `Configuration` -> `Auto-Configuration`. In the Dropdown box select `Sonoff ZBPro TCP` from the list and then click `Apply Configuration`. Your device will now restart and automagically be configured for use with Home Assistant using ZHA.
 

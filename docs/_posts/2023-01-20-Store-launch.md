@@ -6,7 +6,7 @@ last_modified_at: 2023-01-26 22:01:21 +1100
 description: Dialedin is excited to announce the launch of our new webstore, specialising in products that work seamlessly with open Home Automation platforms such as Home Assistant, OpenHAB, Domoticz, Tasmota, ESPHome and more. Our store offers a wide range of products including Zigbee devices, development kits, sensors, displays, tools and much more.
 #description: We are excited to annouce the launch of our new online store and blog, discover your dream smart home today.
 featured_image: /assets/img/sections/photo-1.jpg
-categories: dialedin
+categories: Dialedin
 ---
 
 Dialedin is excited to announce the launch of our new webstore, specialising in products that work seamlessly with open Home Automation platforms such as Home Assistant, OpenHAB, Domoticz, Tasmota, ESPHome and more. Our store offers a wide range of products including Zigbee devices, development kits, sensors, displays, tools and much more.

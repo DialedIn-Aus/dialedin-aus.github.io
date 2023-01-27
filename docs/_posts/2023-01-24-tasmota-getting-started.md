@@ -5,7 +5,7 @@ date:   2023-01-23 15:28:43 +1000
 last_modified_at: 2023-01-26 22:01:21 +1100
 description: Purchasd a pre-flashed Tasmota device? Then this guide will help you get started and get the device connected to your network.
 featured_image: /assets/img/sections/twk-tt.jpg
-categories: tasmota
+categories: Tasmota
 ---
 
 If you have purchased a device pre-flashed with Tasmota firmware, then the first thing you are going to want to do is get it connected to your network. If you are looking to newly flash a supported device and convert it to Tasmota, that is beyond the scope of this guide and you should refer to the [official documentation](https://tasmota.github.io/docs/Getting-Started/).
