@@ -7,7 +7,7 @@ description: Adding the Sonoff Zigbee Bridge Pro with Tasmota to your Home Assis
 featured_image: /assets/img/sections/mark-harrison.jpg
 categories:
   - Tasmota
-  - Home Assitant
+  - Home Assistant
 ---
 
 The Sonoff Zigbee Bridge Pro, when flashed with Tasmota, seamlessly integrates Zigbee with your favourite home automation platform. By adding a Zigbee gateway to your setup you can enjoy support for many different Zigbee devices from most of the different brands on the market including Sonoff, Aqara, IKEA, Tuya and many more. This guide assumes you have purchased a device pre-flashed with Tasmota and will run through the setup on Home Assistant using ZHA. 
