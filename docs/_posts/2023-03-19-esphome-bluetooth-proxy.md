@@ -3,7 +3,7 @@ layout: post
 title:  "Setting up a WT32-ETH01 ESPHome Bluetooh Proxy in Home Assistant"
 date:   2023-03-18 13:38:43 +1100
 last_modified_at: 2023-03-18 13:38:43 +1100
-description: Learn how to extend the Bluetooth reach of your smart home devices with the WT32-ETH01 module and ESPHome Bluetooth proxy feature. This way, you can integrate more Bluetooth devices into your smart home system without worrying about the limited range of Bluetooth technology.
+description: Learn how to extend the range of your smart home Bluetooth devices with the WT32-ETH01 module and ESPHome Bluetooth proxy feature. This way, you can integrate more Bluetooth devices into your Home Assistant smart home setup without worrying about the limited range of Bluetooth technology.
 featured_image: /assets/img/sections/dane.jpg
 categories: 
   - ESPHome
@@ -84,7 +84,7 @@ Configuration is now complete, any Bluetooth device within range of your new Blu
 If you made it this far, let us know in the comments how you went!
 
 ### Advanced ESPHome Usage
-ESPHome is a very powerful platform with support for many sensors, relays, displays and more. It is possible to use this device for far more than just the Bluetooth proxy, by making your own custom firmware utilising any of the supported components. Simply add the following code to your ESPHome YAML file to enable the ethernet port. You can retain the Bluetooth Proxy feature as well in your custome firmware, see the documentaion for all the details.    
+ESPHome is a very powerful platform with support for many sensors, relays, displays and more. It is possible to use this device for far more than just the Bluetooth proxy, by making your own custom firmware utilising any of the supported components. Simply add the following code to your ESPHome YAML file to enable the ethernet port. You can retain the Bluetooth Proxy feature as well in your custom firmware, see the documentaion for all the details.
 
 ```yaml
 ethernet:
