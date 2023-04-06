@@ -96,7 +96,7 @@ On the next screen its recommended to start with an empty network and and then p
 *Note: Home Assistant may automatically discover your ZBDongle-E device, however you should not proceed to configure this, as it will try and setup the traditional Zigbee config which wont work. You can safely ignore this by selecting `Ignore` from the 3 dot menu.*
 
 #### Zigbee2MQTT
-If you instead prefer to use Zigbee2MQTT, this can also connect to the Silabs Multiprotocal Add-on. Install Zigbee2MQTT as per [these instructions](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt#installation) but modify the serial settings to connect to the Silabs addon instead of directly to the dongle.
+If you instead prefer to use Zigbee2MQTT, this can also connect to the Silabs Multiprotocol Add-on. Install Zigbee2MQTT as per [these instructions](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt#installation) but modify the serial settings to connect to the Silabs addon instead of directly to the dongle.
 
 On the `Configuration` tab enter the following under the Serial section:
 
@@ -107,7 +107,7 @@ adapter: ezsp
 
 You can then start the add-on and check the logs to make sure it connected successfully.
 
-Again its recommended to start with an empty network and pair all your devices. If you had a pre-existing Zigbee2MQTT, it maybe be possible to migrate you existing devices however this can be a hit and miss.
+Again its recommended to start with an empty network and pair all your devices. If you had a pre-existing Zigbee2MQTT, it maybe be possible to migrate your existing devices however this can be a hit and miss.
 
 #### Matter and Thread
 If you wish to experiment with Matter and/or Thread you will need to setup the relevant integrations, the Thread integration connects to the Silabs Multiprotocol Add-on to provide support for Thread devices. The Matter integration (and Matter Server add-on) co-ordinates provisioning and control of all Matter WiFi and Thread devices.
