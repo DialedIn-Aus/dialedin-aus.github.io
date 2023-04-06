@@ -15,9 +15,9 @@ There are two buzzwords domininating the home automation world in 2023, 'Matter'
 
 In this blog post we will cover flashing your ZBDongle-E with the a RCP MultiPAN firmware and setting up a Zigbee network using this firmware. A Future blog post will cover Matter and Thread in more detail, however they will also be working at the end of this post.
 
-**DISCLAIMER:** Everything in the blog post is experimental. Flasing the wrong firmware could brick your adapter. There are a lot of moving parts as Matter and Thread support lands in Home Assistant and the other open source platforms, things could break at anytime, or may not work to start with. So dont try this on your production server just yet! However if you are brave continue onwards. None of this officially support by iTead(Sonoff), Home Assistant or others.
+**DISCLAIMER:** Everything in the blog post is experimental. Flashing the wrong firmware could brick your adapter. There are a lot of moving parts as Matter and Thread support lands in Home Assistant and the other open source platforms, things could break at anytime, or may not work to start with. So dont try this on your production server just yet! However if you are brave continue onwards. None of this is officially supported by iTead(Sonoff) or Nabu Casa (Home Assistant).
 
-You can purchase a dongle to flash from our store, [Purchase ZBDongle-E Now](https://shop.dialedin.com.au/products/sonoff-zbdongle-e)
+You can purchase a dongle to flash from our store. [Purchase ZBDongle-E Now](https://shop.dialedin.com.au/products/sonoff-zbdongle-e)
 
 #### Matter and Thread
 Matter is an IoT protocol developed by the Connectivity Standards Alliance (formerly the Zigbee Alliance) that aims to standardize the way smart home devices communicate with each other. Matter is designed to be compatible with various smart home devices, regardless of the brand or manufacturer. This interoperability is expected to make it easier for users to set up and manage their smart home systems, as they can mix and match devices from different brands.
