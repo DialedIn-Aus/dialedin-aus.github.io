@@ -2,8 +2,8 @@
 layout: post
 title:  "Flashing the Sonoff ZBDongle-E to enable Matter, Thread and Zigbee on Home Assistant"
 date:   2023-04-05 13:00:43 +1000
-last_modified_at: 2023-04-05 13:00:43 +1000
-description: Discover the latest in home automation for 2023, Matter and Thread are about to revolutionise smart home tech. In this blog post, learn how to flash your Sonoff ZBDongle-E with a RCP MultiPAN firmware to set up a Zigbee network, while providing simultaneous support for Thread. Stay ahead of the game and explore the possibilities of these innovative protocols.
+last_modified_at: 2023-04-20 17:05:06 +1000
+description: Discover the latest in home automation for 2023, Matter and Thread are about to revolutionise smart home tech. In this blog post, learn how to flash your Sonoff ZBDongle-E or EasyIot ZB-GW04 with a RCP MultiPAN firmware to set up a Zigbee network, while providing simultaneous support for Thread. Stay ahead of the game and explore the possibilities of these innovative protocols.
 featured_image: /assets/img/sections/unsplashs.jpg
 categories: 
   - Home Assitant
@@ -13,11 +13,13 @@ categories:
 
 There are two buzzwords domininating the home automation world in 2023, 'Matter' and 'Thread', that promise to fix many of the shortcomings with existing platforms, in particular by improving interoperability between smart home devices from different vendors. The folks at Nabu Casa (the company behind Home Assistant) have been hard at work bringing support for these protocols to Home Assistant. Currently they are focusing on support for their own hardware devices, SkyConnect and Home Assistant Yellow, however the ZBDongle-E is based on the same Silicon Labs EFRMG21 chipset, so with a few more manual steps it can also work. 
 
-In this blog post we will cover flashing your ZBDongle-E with the a RCP MultiPAN firmware and setting up a Zigbee network using this firmware. A Future blog post will cover Matter and Thread in more detail, however they will also be working at the end of this post.
+In this blog post we will cover flashing your ZBDongle-E or ZB-GW04 Dongles with the a RCP MultiPAN firmware and setting up a Zigbee network using this firmware. A Future blog post will cover Matter and Thread in more detail, however they will also be working at the end of this post.
 
 **DISCLAIMER:** Everything in the blog post is experimental. Flashing the wrong firmware could brick your adapter. There are a lot of moving parts as Matter and Thread support lands in Home Assistant and the other open source platforms, things could break at anytime, or may not work to start with. So dont try this on your production server just yet! However if you are brave continue onwards. None of this is officially supported by iTead(Sonoff) or Nabu Casa (Home Assistant).
 
-You can purchase a dongle to flash from our store. [Purchase ZBDongle-E Now](https://shop.dialedin.com.au/products/sonoff-zbdongle-e)
+You can purchase a dongle to flash from our store.
+* [Purchase ZBDongle-E](https://shop.dialedin.com.au/products/sonoff-zbdongle-e)
+* [Purchase ZB-GW04 v1.2](https://shop.dialedin.com.au/products/zb-gw04-v1-2-zigbee-dongle)
 
 #### Matter and Thread
 Matter is an IoT protocol developed by the Connectivity Standards Alliance (formerly the Zigbee Alliance) that aims to standardize the way smart home devices communicate with each other. Matter is designed to be compatible with various smart home devices, regardless of the brand or manufacturer. This interoperability is expected to make it easier for users to set up and manage their smart home systems, as they can mix and match devices from different brands.
@@ -54,7 +56,8 @@ For the steps that follow you are going to need to know the serial port of your 
 If you are running Home Assistant in a Virtual Machine or Docker, make sure you pass the serial port of your adapter through to Home Assistant.
 
 Download the following:
-* [ MultiPAN RCP Firmware ](https://github.com/skgsergio/silabs-multiprotocol-firmware-zbgw04-usb/raw/main/firmware/ZB-GW04_v1.1_GeckoSDK_v4.2.2_rcp-uart-802154_nohwfc_115200.gbl)
+* [ MultiPAN RCP Firmware ZBDongle-E ](https://github.com/skgsergio/silabs-multiprotocol-firmware-zbgw04-usb/raw/main/firmware/ZB-GW04_v1.1_GeckoSDK_v4.2.2_rcp-uart-802154_nohwfc_115200.gbl)
+* [ MultiPAN RCP Firmware ZB-GW04 v1.2 ](https://github.com/skgsergio/silabs-multiprotocol-firmware-zbgw04-usb/raw/main/firmware/ZB-GW04_v1.2_GeckoSDK_v4.2.2_rcp-uart-802154_hwfc_230400.gbl)
 
 To flash the firmware, use the following command, making sure to update with the correct serial port for your device and the firmware filename. 
 ```
@@ -75,8 +78,9 @@ Make sure you are running the latest version of Home Assistant. Each new month b
 ##### Silabs Multiprotocol Addon
 A core component of the stack when running an RCP firmware is the Silabs Multiprotocol Addon, this acts as the gateway between your dongle and Home Assistant. It also runs the protocol specific servers, for coordinating your Zigbee and/or Thread networks. Your ZHA or Zigbee2MQTT integrations will communicate with this addon rather than directly with the dongle. It also allows you to run Thread simulataneously as well.
 
-Goto `Settings -> Add-ons` and install the `Silicon Labs Multiprotocol` Add-on. On the Configuration page, select your device,set the correct baud rate (115200 for the firmware linked above) and disable hardware flow control and automatic firmware updates.
-
+Goto `Settings -> Add-ons` and install the `Silicon Labs Multiprotocol` Add-on. On the Configuration page, select your device, then set the following settings for firmware linked above. If you use a different firmware adjust these values accordingly.
+* ZBDongle-E: baudrate: 115200 and disable hardware flow control and disable automatic firmware updates.
+* ZB-GW04 v1.2: baudrate 230400, enable hardware flow control and disable automatic firmware updates.
 <img src='../assets/img/blog/Silabs-Addon-Config.png' alt="Silabs Mutiprotocal addon config" width="75%" style="display: block; margin: 0 auto">
 
 You can now start the add-on. Check the logs tab to make sure it has connected to your ZBDongle-E and that there are no errors.
