@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="{{ "/assets/styles/styles.css" | relative_url }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  {% if site.data.settings.advanced_settings.analytics_code %}
+  {% if jekyll.environment == 'production' and site.data.settings.advanced_settings.analytics_code %}
   <!-- Analytics Code -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.settings.advanced_settings.analytics_code }}"></script>
