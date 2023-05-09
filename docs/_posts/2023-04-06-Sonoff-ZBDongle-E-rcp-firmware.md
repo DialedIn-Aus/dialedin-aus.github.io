@@ -2,7 +2,7 @@
 layout: post
 title:  "Flashing the Sonoff ZBDongle-E to enable Matter, Thread and Zigbee on Home Assistant"
 date:   2023-04-05 13:00:43 +1000
-last_modified_at: 2023-04-20 17:05:06 +1000
+last_modified_at: 2023-05-09 19:05:21 +1000
 description: Discover the latest in home automation for 2023, Matter and Thread are about to revolutionise smart home tech. In this blog post, learn how to flash your Sonoff ZBDongle-E or EasyIot ZB-GW04 with a RCP MultiPAN firmware to set up a Zigbee network, while providing simultaneous support for Thread. Stay ahead of the game and explore the possibilities of these innovative protocols.
 featured_image: /assets/img/sections/unsplashs.jpg
 categories: 
@@ -10,6 +10,7 @@ categories:
   - Matter
 ---
 
+**UPDATE 9/5/2023**: *Updated firmware links for Gecko SDK v4.2.3 release, also added a [web flasher](#web-flasher) to this blog post so you can quickly flash your dongle in the browser directly from this post!*
 
 There are two buzzwords domininating the home automation world in 2023, 'Matter' and 'Thread', that promise to fix many of the shortcomings with existing platforms, in particular by improving interoperability between smart home devices from different vendors. The folks at Nabu Casa (the company behind Home Assistant) have been hard at work bringing support for these protocols to Home Assistant. Currently they are focusing on support for their own hardware devices, SkyConnect and Home Assistant Yellow, however the ZBDongle-E is based on the same Silicon Labs EFRMG21 chipset, so with a few more manual steps it can also work. 
 
@@ -36,6 +37,33 @@ More recently there have become available Remote Co-Processor (RCP) based firmwa
 
 The ZBDongle-E ships from the factory with a NCP firmware v6.10.3, if you are just wanting to use Zigbee we recommend you stick with this firmware.
 
+#### Web Flasher
+**UPDATE 9/5/2023**: You can now flash your ZBDongle-E directly from the browser.
+
+Thanks to the power of [SL Web Tools](https://github.com/NabuCasa/sl-web-tools), it is now possible to flash your ZBDongle-E directly from your browser, directly from this blog post. This requires the use of Chrome or Edge browsers and should work on Linux, Mac and Windows.
+
+Click the `Flash` button below, you will then need to select your dongle (serial port) in the first pop-up and click connect. It will take a moment to probe your dongle then select `Change Firmware` and select Multi-PAN(RCP) and `Install`. It will take about one minute to flash and you are done.
+
+When you get to the settings in Silicon Labs Multiprotocol addon configuration, you will need to use baudrate 460800 and disable the hardware flow control option.
+
+> Your browser does not support the WebSerial API. Try Chrome or Edge instead.
+{: #notSupported .hidden .serialErr }
+
+<div class="col-lg-6 col-sm-6">
+  Sonoff Zigbee 3.0 USB Dongle Plus V2
+
+  <img src="../assets/manifests/dongle-e.png" alt="ZBDongle-E photo">
+  <div class="Supported text-center">
+      <nabucasa-zigbee-flasher manifest="/assets/manifests/zbdongle-e.json">
+          <span slot="button">Flash</span>
+      </nabucasa-zigbee-flasher>
+  </div>
+</div>
+<br>
+
+
+Once flashed via the web flasher you can skip the next section and head straight  to [Setup](#setup-in-home-assistant) Home Assistant.
+
 #### Flashing the dongle
 To flash new firmware onto the ZBDongle-E we will use the Universal Silabs Flasher [^1] tool. There is no need to disassemble the dongle to access the boot button as these tools can automatically put the device into bootloader mode, ready for firmware upload. 
 
@@ -56,8 +84,8 @@ For the steps that follow you are going to need to know the serial port of your 
 If you are running Home Assistant in a Virtual Machine or Docker, make sure you pass the serial port of your adapter through to Home Assistant.
 
 Download the following:
-* [ MultiPAN RCP Firmware ZBDongle-E ](https://github.com/skgsergio/silabs-multiprotocol-firmware-zbgw04-usb/raw/main/firmware/ZB-GW04_v1.1_GeckoSDK_v4.2.2_rcp-uart-802154_nohwfc_115200.gbl)
-* [ MultiPAN RCP Firmware ZB-GW04 v1.2 ](https://github.com/skgsergio/silabs-multiprotocol-firmware-zbgw04-usb/raw/main/firmware/ZB-GW04_v1.2_GeckoSDK_v4.2.2_rcp-uart-802154_hwfc_230400.gbl)
+* [ MultiPAN RCP Firmware ZBDongle-E ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zbdonglee/rcp-uart-802154-v4.2.3-zbdonglee-460800.gbl)
+* [ MultiPAN RCP Firmware ZB-GW04 v1.2 ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zb-gw04-1v2/rcp-uart-802154-v4.2.3-zb-gw04-1v2-230400.gbl)
 
 To flash the firmware, use the following command, making sure to update with the correct serial port for your device and the firmware filename. 
 ```
@@ -79,7 +107,7 @@ Make sure you are running the latest version of Home Assistant. Each new month b
 A core component of the stack when running an RCP firmware is the Silabs Multiprotocol Addon, this acts as the gateway between your dongle and Home Assistant. It also runs the protocol specific servers, for coordinating your Zigbee and/or Thread networks. Your ZHA or Zigbee2MQTT integrations will communicate with this addon rather than directly with the dongle. It also allows you to run Thread simulataneously as well.
 
 Goto `Settings -> Add-ons` and install the `Silicon Labs Multiprotocol` Add-on. On the Configuration page, select your device, then set the following settings for firmware linked above. If you use a different firmware adjust these values accordingly.
-* ZBDongle-E: baudrate: 115200 and disable hardware flow control and disable automatic firmware updates.
+* ZBDongle-E: baudrate: 460800 and disable hardware flow control and disable automatic firmware updates.
 * ZB-GW04 v1.2: baudrate 230400, enable hardware flow control and disable automatic firmware updates.
 <img src='../assets/img/blog/Silabs-Addon-Config.png' alt="Silabs Mutiprotocal addon config" width="75%" style="display: block; margin: 0 auto">
 
@@ -127,3 +155,15 @@ Let us know in the comments how you went!
 [Zigbee router firmware](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/Router)
 
 [Zigbee2MQTT addon installation](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt#installation)
+
+
+<script 
+  type="module" 
+  src="https://unpkg.com/@nabucasa/sl-web-tools@0.10.0/dist/web/nabucasa-zigbee-flasher.js?module">
+</script>
+
+<script>
+  if(!navigator.serial){
+    document.getElementById("notSupported").classList.remove('hidden');
+  }
+</script>
