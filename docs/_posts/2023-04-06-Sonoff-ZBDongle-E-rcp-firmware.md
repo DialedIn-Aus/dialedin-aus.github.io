@@ -81,7 +81,7 @@ For the steps that follow you are going to need to know the serial port of your 
 * Windows: Check in device manager, it will likely be `COM5` or similar
 * Mac: Check with `ls /dev/tty.usb*` you should find similar to `/dev/tty.usbserial20375`
 
-If you are running Home Assistant in a Virtual Machine or Docker, make sure you pass the serial port of your adapter through to Home Assistant.
+If you are running Home Assistant in a Virtual Machine or Docker, make sure you pass the serial port of your adapter through to Home Assistant **after** flashing is complete.
 
 Download the following:
 * [ MultiPAN RCP Firmware ZBDongle-E ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zbdonglee/rcp-uart-802154-v4.2.3-zbdonglee-460800.gbl)
