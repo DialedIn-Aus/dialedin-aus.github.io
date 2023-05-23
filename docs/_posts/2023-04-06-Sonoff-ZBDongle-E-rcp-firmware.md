@@ -40,7 +40,7 @@ The ZBDongle-E ships from the factory with a NCP firmware v6.10.3, if you are ju
 #### Web Flasher
 **UPDATE 9/5/2023**: You can now flash your ZBDongle-E directly from the browser.
 
-Thanks to the power of [SL Web Tools](https://github.com/NabuCasa/sl-web-tools), it is now possible to flash your ZBDongle-E directly from your browser, directly from this blog post. This requires the use of Chrome or Edge browsers and should work on Linux, Mac and Windows.
+Thanks to the power of [SL Web Tools](https://github.com/NabuCasa/sl-web-tools) and some work done by our lead engineer [Darkxst](https://github.com/darkxst/sl-test), it is now possible to flash your ZBDongle-E from your browser, directly from this blog post. This requires the use of Chrome or Edge browsers and should work on Linux, Mac and Windows.
 
 Click the `Flash` button below, you will then need to select your dongle (serial port) in the first pop-up and click connect. It will take a moment to probe your dongle then select `Change Firmware` and select Multi-PAN(RCP) and `Install`. It will take about one minute to flash and you are done.
 
@@ -149,13 +149,16 @@ See the below links to the documentation. We will cover this in more detail in a
 Let us know in the comments how you went!
 
 #### Links
-[Home Assistant Matter integration](https://www.home-assistant.io/integrations/matter)
-[Home Assistant Thread integration] (https://www.home-assistant.io/integrations/thread)
+[Latest Silabs Firmware Builds](https://github.com/darkxst/silabs-firmware-builder/tree/main/firmware_builds)  
+[Sonoff Zigbee Router Firmware](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/Router)
 
-[Zigbee router firmware](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/Router)
+[Home Assistant Matter integration](https://www.home-assistant.io/integrations/matter)  
+[Home Assistant Thread integration](https://www.home-assistant.io/integrations/thread)
+
 
 [Zigbee2MQTT addon installation](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt#installation)
 
+[Reference implementation of SL Web Tools](https://github.com/darkxst/sl-test)
 
 <script 
   type="module" 
