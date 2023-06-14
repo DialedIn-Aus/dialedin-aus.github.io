@@ -12,6 +12,8 @@ categories:
 
 **UPDATE 9/5/2023**: *Updated firmware links for Gecko SDK v4.2.3 release, also added a [web flasher](#web-flasher) to this blog post so you can quickly flash your dongle in the browser directly from this post!*
 
+**UPDATE 14/6/2023**: *Silabs Multiprotocol Addon 2.2 has been released and requires the dongle firmware to be updated to 4.3.0. If you previously followed this guide you will need to update to the new version. Updated firmware links and web-flasher for Gecko SDK v4.3.0 release have been added to this blog*
+
 There are two buzzwords domininating the home automation world in 2023, 'Matter' and 'Thread', that promise to fix many of the shortcomings with existing platforms, in particular by improving interoperability between smart home devices from different vendors. The folks at Nabu Casa (the company behind Home Assistant) have been hard at work bringing support for these protocols to Home Assistant. Currently they are focusing on support for their own hardware devices, SkyConnect and Home Assistant Yellow, however the ZBDongle-E is based on the same Silicon Labs EFRMG21 chipset, so with a few more manual steps it can also work. 
 
 In this blog post we will cover flashing your ZBDongle-E or ZB-GW04 Dongles with the a RCP MultiPAN firmware and setting up a Zigbee network using this firmware. A Future blog post will cover Matter and Thread in more detail, however they will also be working at the end of this post.
@@ -84,8 +86,8 @@ For the steps that follow you are going to need to know the serial port of your 
 If you are running Home Assistant in a Virtual Machine or Docker, make sure you pass the serial port of your adapter through to Home Assistant **after** flashing is complete.
 
 Download the following:
-* [ MultiPAN RCP Firmware ZBDongle-E ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zbdonglee/rcp-uart-802154-v4.2.3-zbdonglee-460800.gbl)
-* [ MultiPAN RCP Firmware ZB-GW04 v1.2 ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zb-gw04-1v2/rcp-uart-802154-v4.2.3-zb-gw04-1v2-230400.gbl)
+* [ MultiPAN RCP Firmware ZBDongle-E ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zbdonglee/rcp-uart-802154-v4.3.0-zbdonglee-460800.gbl)
+* [ MultiPAN RCP Firmware ZB-GW04 v1.2 ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zb-gw04-1v2/rcp-uart-802154-v4.3.0-zb-gw04-1v2-230400.gbl)
 
 To flash the firmware, use the following command, making sure to update with the correct serial port for your device and the firmware filename. 
 ```
