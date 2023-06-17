@@ -4,7 +4,7 @@ title:  "Sonoff Zigbee Gateways and Sensors Overview"
 date:   2023-06-16 13:48:05 +1000
 last_modified_at: 2023-06-16 13:48:05 +1000
 description: Discover the world of Sonoff Zigbee gateways and sensors in our comprehensive blog post. Explore the range of available products and gain valuable insights into their functionalities, applications, and benefits. Whether you're a beginner or an experienced user, this overview will help you make informed decisions for your smart home or IoT projects. Get ready to delve into the exciting possibilities offered by Sonoff's Zigbee technology.
-featured_image: /assets/img/sections/mark-harrison.jpg
+featured_image: /assets/img/sections/photo-1.jpg
 categories: 
   - Home Assitant
   - Zigbee
