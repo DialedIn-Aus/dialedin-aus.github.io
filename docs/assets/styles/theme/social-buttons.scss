@@ -24,6 +24,9 @@
   &.btn-instagram {
     @include social-buttons-color($instagram, $instagram-states);
   }
+  &.btn-discord {
+    @include social-buttons-color($facebook, $facebook-states);
+  }
   &.btn-reddit {
     @include social-buttons-color($reddit, $reddit-states);
   }

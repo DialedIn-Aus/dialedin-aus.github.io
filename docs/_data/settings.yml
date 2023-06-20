@@ -81,7 +81,8 @@ contact_settings:
   send_button_text: 'Send Message'
 
 social_settings:
- # facebook_url: #'https://www.facebook.com/jekyllthemes/'
+  facebook_url: 'https://www.facebook.com/dialedin.aus'
+  discord_url: 'https://discord.gg/R89cau2mGj'
  # twitter_url: #'https://twitter.com/jekyllthemesio'
  # instagram_url: #'https://twitter.com/jekyllthemesio'
   youtube_url: ''
