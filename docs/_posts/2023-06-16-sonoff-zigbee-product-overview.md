@@ -57,3 +57,10 @@ In conclusion, the Sonoff Zigbee product line offers a range of options for buil
     <a href="https://shop.dialedin.com.au" target="_blank" class="btn btn-primary" >Shop Now</a>
   </div>
 </div>
+
+  
+### Links
+[Zigbee Compatibility Database](https://zigbee.blakadder.com/)  
+[Zigbee2MQTT](https://www.zigbee2mqtt.io/)  
+[Zigbee Home Automation (ZHA)](https://www.home-assistant.io/integrations/zha/)  
+[OpenHab Zigbee Bindings](https://www.openhab.org/addons/bindings/zigbee/)  
