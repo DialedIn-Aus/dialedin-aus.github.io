@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sonoff Zigbee Gateways and Sensors Overview"
+title:  "Sonoff Zigbee Gateways and Sensors: A Comprehensive Overview"
 date:   2023-06-16 13:48:05 +1000
 last_modified_at: 2023-06-16 13:48:05 +1000
 description: Discover the world of Sonoff Zigbee gateways and sensors in our comprehensive blog post. Explore the range of available products and gain valuable insights into their functionalities, applications, and benefits. Whether you're a beginner or an experienced user, this overview will help you make informed decisions for your smart home or IoT projects. Get ready to delve into the exciting possibilities offered by Sonoff's Zigbee technology.
@@ -19,7 +19,7 @@ Whether you're looking for a compact and portable solution, or a more powerful c
 
 <img src='../assets/img/blog/sonoff-review-bridge.jpg' alt="Sonoff Zigbee Bridge Pro" width="50%" style="display: block; margin: 0 auto">
 
-[Sonoff Zigbee Bridge](https://shop.dialedin.com.au/products/zbbridge): This gateway device was the first of its kind from Sonoff, and it serves as the central hub for all your Zigbee-compatible devices. With its simple setup process, the Zigbee bridge creates a bridge between you WiFi network and Zigbee. The Zigbee Bridge makes it easy to connect all your smart home devices and control them using the eWeLink app. It can also be flashed with Tasmota, allowing it to act as a Zigbee Hub for your open automation platform such as Home ASsistant. However this product is now obsolete and is being replaced by the Zigbee Bridge Pro. We still however have limited stock of this item remaining in both eWeLink and Tasmota versions. 
+[Sonoff Zigbee Bridge](https://shop.dialedin.com.au/products/zbbridge): This gateway device was the first of its kind from Sonoff, and it serves as the central hub for all your Zigbee-compatible devices. With its simple setup process, the Zigbee bridge creates a bridge between you WiFi network and Zigbee. The Zigbee Bridge makes it easy to connect all your smart home devices and control them using the eWeLink app. It can also be flashed with Tasmota, allowing it to act as a Zigbee Hub for your open automation platform such as Home Assistant. However this product is now obsolete and is being replaced by the Zigbee Bridge Pro. We still however have limited stock of this item remaining in both eWeLink and Tasmota versions. 
 
 [Sonoff Zigbee Bridge Pro](https://shop.dialedin.com.au/products/zbbridge-p): The new Sonoff Zigbee Bridge Pro takes things to the next level, with a faster processor and more memory it can support many more devices. The Zigbee Bridge Pro is also supported by Tasmota. Once this device has been flashed with Tamota it acts as a universal gateway, allowing users to connect their Zigbee devices to their smart home system using Zigbee2MQTT and ZHA. Breaking free of the vendor lock in that is normally associated with these products. The majority of Zigbee devices from most manufacturers will work. This provides users with greater flexibility and control over their smart home setup, and allows them to integrate their devices into a broader range of smart home platforms and ecosystems.
 
@@ -34,10 +34,12 @@ Zigbee technology has revolutionised the smart home industry by providing a low-
 
 [SNZB-01](https://shop.dialedin.com.au/products/sonoff-snzb-01) - **Wireless Button**: The Sonoff Wireless Button is a simple and versatile wireless button  that allows you to control your home with just a press of a button. It supports single, double, and long press actions, which can be programmed to perform different tasks. This is a great way to control smart lights or other smart devices in your home.
 <img src='../assets/img/blog/sonoff-review-SNZB-01.png' alt="Sonoff Zigbee SNZB-01" width="30%" style="display: block; margin: 0 auto">
+
 SNZB-01P - **NEW** Wireless Button: Coming Soon. Keeping all the features of the previous version, This button features a sleek new design, vastly improved battery life, new mounting options and upgraded internal hardware that make it ready for the future of Matter and Thread with future firmware updates. 
 
 [SNZB-02](https://shop.dialedin.com.au/products/sonoff-snzb-02) - **Temperature and Humidity Sensor**: The Sonoff Temperature and Humidity Sensor provides real-time temperature and humidity readings for your home. It has a wide range of temperature detection range from 0°C to 60°C, and humidity detection range from 0% to 100%. The sensor is also equipped with a high accuracy of ±0.3°C and ±3%RH, ensuring that you receive accurate readings. Use it to provide climate control in your home activation air conditoner or fans at a set temperature or humidity.
 <img src='../assets/img/blog/sonoff-review-SNZB-02.png' alt="Sonoff Zigbee SNZB-02" width="30%" style="display: block; margin: 0 auto">
+
 SNZB-02P - **NEW** Temperature and Humidity Sensor: Coming Soon. The Sonoff Temperature and Humidity Sensor continues to be improved over the very popular predessor. This new sensor features a sleek new design, vastly improved battery life, new mounting options and upgraded internal hardware that make it ready for the future of Matter and Thread with future firmware updates. . 
 
 [SNZB-02D](https://shop.dialedin.com.au/products/sonoff-zigbee-lcd-temperature-and-humidity-sensor) -  **LCD Temperature and Humidity Sensor**: This is the newest product in the Sonoff Zigbee Sensor line-up. It adds a large LCD, which allows to see the current temperature and humidity at a glance. All other features are the same as the SNZB-02.
