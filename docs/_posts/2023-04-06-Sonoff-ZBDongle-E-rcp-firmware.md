@@ -2,7 +2,7 @@
 layout: post
 title:  "Flashing the Sonoff ZBDongle-E to enable Matter, Thread and Zigbee on Home Assistant"
 date:   2023-04-05 13:00:43 +1000
-last_modified_at: 2023-05-09 19:05:21 +1000
+last_modified_at: 2023-08-02 21:18:21 +1000
 description: Discover the latest in home automation for 2023, Matter and Thread are about to revolutionise smart home tech. In this blog post, learn how to flash your Sonoff ZBDongle-E or EasyIot ZB-GW04 with a RCP MultiPAN firmware to set up a Zigbee network, while providing simultaneous support for Thread. Stay ahead of the game and explore the possibilities of these innovative protocols.
 featured_image: /assets/img/sections/unsplashs.jpg
 categories: 
@@ -13,6 +13,8 @@ categories:
 **UPDATE 9/5/2023**: *Updated firmware links for Gecko SDK v4.2.3 release, also added a [web flasher](#web-flasher) to this blog post so you can quickly flash your dongle in the browser directly from this post!*
 
 **UPDATE 14/6/2023**: *Silabs Multiprotocol Addon 2.2 has been released and requires the dongle firmware to be updated to 4.3.0. If you previously followed this guide you will need to update to the new version. Updated firmware links and web-flasher for Gecko SDK v4.3.0 release have been added to this blog*
+
+**UPDATE 2/8/2023**: *Updated firmware links and web flasher for Gecko SDK v4.3.1 release*
 
 There are two buzzwords domininating the home automation world in 2023, 'Matter' and 'Thread', that promise to fix many of the shortcomings with existing platforms, in particular by improving interoperability between smart home devices from different vendors. The folks at Nabu Casa (the company behind Home Assistant) have been hard at work bringing support for these protocols to Home Assistant. Currently they are focusing on support for their own hardware devices, SkyConnect and Home Assistant Yellow, however the ZBDongle-E is based on the same Silicon Labs EFRMG21 chipset, so with a few more manual steps it can also work. 
 
@@ -86,8 +88,8 @@ For the steps that follow you are going to need to know the serial port of your 
 If you are running Home Assistant in a Virtual Machine or Docker, make sure you pass the serial port of your adapter through to Home Assistant **after** flashing is complete.
 
 Download the following:
-* [ MultiPAN RCP Firmware ZBDongle-E ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zbdonglee/rcp-uart-802154-v4.3.0-zbdonglee-460800.gbl)
-* [ MultiPAN RCP Firmware ZB-GW04 v1.2 ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zb-gw04-1v2/rcp-uart-802154-v4.3.0-zb-gw04-1v2-230400.gbl)
+* [ MultiPAN RCP Firmware ZBDongle-E ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zbdonglee/rcp-uart-802154-v4.3.1-zbdonglee-460800.gbl)
+* [ MultiPAN RCP Firmware ZB-GW04 v1.2 ](https://raw.githubusercontent.com/darkxst/silabs-firmware-builder/main/firmware_builds/zb-gw04-1v2/rcp-uart-802154-v4.3.1-zb-gw04-1v2-230400.gbl)
 
 To flash the firmware, use the following command, making sure to update with the correct serial port for your device and the firmware filename. 
 ```
