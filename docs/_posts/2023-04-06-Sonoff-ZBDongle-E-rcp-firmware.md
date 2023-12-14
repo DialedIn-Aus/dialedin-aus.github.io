@@ -166,7 +166,7 @@ Let us know in the comments how you went!
 
 <script 
   type="module" 
-  src="https://unpkg.com/@nabucasa/sl-web-tools@0.10.0/dist/web/nabucasa-zigbee-flasher.js?module">
+  src="https://unpkg.com/@nabucasa/sl-web-tools@0.10.1/dist/web/nabucasa-zigbee-flasher.js?module">
 </script>
 
 <script>
