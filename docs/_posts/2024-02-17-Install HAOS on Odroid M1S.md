@@ -45,7 +45,7 @@ As the eMMC in the Odroid M1S is soldered to the board, its not possible to simp
 
 <img src='../assets/img/blog/M1S-Ports.webp' alt="Odroid M1S Board" width="50%" style="display: block; margin: 0 auto">
 
-Installing HAOS erases Petitboot, the factory bootloader provided by Hardkernel. If you wish to return to using official Hardkernel images, short the two maskrom pads near the 40pin connector while booting an SD card with [Recovery Image][1]
+Installing HAOS erases the factory bootloader provided by Hardkernel. If you wish to return to using official Hardkernel images, see the [recovery steps][5] in the documentation.
 
 ### Flash Home Assistant OS
 
