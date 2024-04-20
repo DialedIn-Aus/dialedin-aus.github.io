@@ -2,7 +2,7 @@
 layout: post
 title:  "Flashing the Sonoff ZBDongle-E to enable Matter, Thread and Zigbee on Home Assistant"
 date:   2023-04-05 13:00:43 +1000
-last_modified_at: 2023-08-02 21:18:21 +1000
+last_modified_at: 2024-04-20 09:18:41 +1000
 description: Discover the latest in home automation for 2023, Matter and Thread are about to revolutionise smart home tech. In this blog post, learn how to flash your Sonoff ZBDongle-E or EasyIot ZB-GW04 with a RCP MultiPAN firmware to set up a Zigbee network, while providing simultaneous support for Thread. Stay ahead of the game and explore the possibilities of these innovative protocols.
 featured_image: /assets/img/sections/unsplashs.jpg
 categories: 
@@ -25,6 +25,9 @@ In this blog post we will cover flashing your ZBDongle-E or ZB-GW04 Dongles with
 You can purchase a dongle to flash from our store.
 * [Purchase ZBDongle-E](https://shop.dialedin.com.au/products/sonoff-zbdongle-e)
 * [Purchase ZB-GW04 v1.2](https://shop.dialedin.com.au/products/zb-gw04-v1-2-zigbee-dongle)
+
+If you are outside Australia you can purchase from Sonoff with our affiliate link:  
+* [Purchase ZBongle-E](https://itead.cc/product/zigbee-3-0-usb-dongle/ref/272/)
 
 #### Matter and Thread
 Matter is an IoT protocol developed by the Connectivity Standards Alliance (formerly the Zigbee Alliance) that aims to standardize the way smart home devices communicate with each other. Matter is designed to be compatible with various smart home devices, regardless of the brand or manufacturer. This interoperability is expected to make it easier for users to set up and manage their smart home systems, as they can mix and match devices from different brands.
@@ -153,6 +156,11 @@ See the below links to the documentation. We will cover this in more detail in a
 Let us know in the comments how you went!
 
 #### Links
+[Purchase ZBDongle-E - Australia ](https://shop.dialedin.com.au/products/sonoff-zbdongle-e)  
+If you are outside Australia you can purchase from Sonoff with our affiliate link:  
+[Purchase ZBongle-E - Wordwide ](https://itead.cc/product/zigbee-3-0-usb-dongle/ref/272/)
+
+
 [Latest Silabs Firmware Builds](https://github.com/darkxst/silabs-firmware-builder/tree/main/firmware_builds)  
 [Sonoff Zigbee Router Firmware](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/Router)
 

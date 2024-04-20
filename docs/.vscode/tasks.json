@@ -1,0 +1,10 @@
+{
+    "version": "0.0.2",
+    "tasks": [
+      {
+        "label": "jekyll serve",
+        "command": "bundle exec jekyll serve --drafts",
+        "type": "shell"
+      }
+    ]
+}
