@@ -2,7 +2,7 @@
 layout: post
 title:  "Setting up a WT32-ETH01 ESPHome Bluetooh Proxy in Home Assistant"
 date:   2023-03-18 13:38:43 +1100
-last_modified_at: 2023-03-18 13:38:43 +1100
+last_modified_at: 2024-05-13 13:38:43 +1100
 description: Learn how to extend the range of your smart home Bluetooth devices with the WT32-ETH01 module and ESPHome Bluetooth proxy feature. This way, you can integrate more Bluetooth devices into your Home Assistant smart home setup without worrying about the limited range of Bluetooth technology.
 featured_image: /assets/img/sections/dane.jpg
 categories: 
@@ -10,6 +10,7 @@ categories:
   - Home Assitant
 ---
 
+**UPDATE:** The ESPHome web flasher is no longer displaying 'DIY' devices, including the WT32-ETH01. See below [Instructions](#advanced-esphome-build) to build your own firmware.
 
 The WT32-ETH01 is an embedded serial to Ethernet module based on the ESP32 series designed by Wireless-Tag. It features RJ45 network port that supports 10/100Mbps speed connections allowing to create ethernet based IoT devices. It also supports Wi-Fi and Bluetooth protocols, making it a versatile device for IoT applications that require alternate connectivity. These modules are compatible with Arduino IDE, Tasmota, ESPHome and most other popular ESP32 based projects and distributions.
 
@@ -83,6 +84,28 @@ Configuration is now complete, any Bluetooth device within range of your new Blu
 
 If you made it this far, let us know in the comments how you went!
 
+### ESPHome Install
+If you need to flash your new device you can do this from the Home Assistant ESPHome addon. Connect your programmer to the WT32-ETH01 and add it as a new device on the ESPHome page.
+
+You then can use the contents of this yaml file added to your new device, to build the bluetooth proxy:
+https://raw.githubusercontent.com/esphome/firmware/main/bluetooth-proxy/wt32-eth01.yaml
+
+### Advanced ESPHome Build
+ESPHome BT Proxy can also be using the standalone ESPHome CLI build:  
+This requires Docker, [esptool][2] and the [yaml config][1]:
+
+```
+# Pull docker image
+docker pull ghcr.io/esphome/esphome
+
+# Make a new directory and save yaml: wt32-eth01.yaml; then build:
+docker run --rm -v "${PWD}":/config -it ghcr.io/esphome/esphome run wt32-eth01.yaml
+cp ./.esphome/build/wt32-eth01-bt-proxy/.pioenvs/wt32-eth01-bt-proxy/firmware.bin wt32-eth01-btproxy.bin
+
+# Flash: replace /dev/ttyUSB0 as required
+esptool --port /dev/ttyUSB0 --baud 921600 write_flash 0x0 wr32-eth01-btproxy.bin
+```
+
 ### Advanced ESPHome Usage
 ESPHome is a very powerful platform with support for many sensors, relays, displays and more. It is possible to use this device for far more than just the Bluetooth proxy, by making your own custom firmware utilising any of the supported components. Simply add the following code to your ESPHome YAML file to enable the ethernet port. You can retain the Bluetooth Proxy feature as well in your custom firmware, see the documentaion for all the details.
 
@@ -97,6 +120,7 @@ ethernet:
 ```
 
 
+
 #### Links
 ESPHome:  
 [Bluetooth proxy installer](https://esphome.github.io/bluetooth-proxies/?diy)  
@@ -105,3 +129,6 @@ ESPHome:
 
 WT32-ETH01 
 [Datasheet](http://www.wireless-tag.com/wp-content/uploads/2022/10/WT32-ETH01_datasheet_V1.3-en.pdf)
+
+[1]: https://raw.githubusercontent.com/esphome/firmware/main/bluetooth-proxy/wt32-eth01.yaml
+[2]: https://github.com/espressif/esptool/releases
