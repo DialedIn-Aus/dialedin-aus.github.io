@@ -103,9 +103,10 @@ docker run --rm -v "${PWD}":/config -it ghcr.io/esphome/esphome run wt32-eth01.y
 cp ./.esphome/build/wt32-eth01-bt-proxy/.pioenvs/wt32-eth01-bt-proxy/firmware.bin wt32-eth01-btproxy.bin
 
 # Flash: replace /dev/ttyUSB0 as required
-esptool --port /dev/ttyUSB0 --baud 921600 write_flash 0x0 wr32-eth01-btproxy.bin
+esptool --port /dev/ttyUSB0 --baud 921600 write_flash 0x0 wt32-eth01-btproxy.bin
 ```
 
+Atlernatively instead of `esptool`, you can use [ESPHome Web][3] to flash the firmware from any Chrome based web browser.
 ### Advanced ESPHome Usage
 ESPHome is a very powerful platform with support for many sensors, relays, displays and more. It is possible to use this device for far more than just the Bluetooth proxy, by making your own custom firmware utilising any of the supported components. Simply add the following code to your ESPHome YAML file to enable the ethernet port. You can retain the Bluetooth Proxy feature as well in your custom firmware, see the documentaion for all the details.
 
@@ -132,3 +133,4 @@ WT32-ETH01
 
 [1]: https://raw.githubusercontent.com/esphome/firmware/main/bluetooth-proxy/wt32-eth01.yaml
 [2]: https://github.com/espressif/esptool/releases
+[3]: https://web.esphome.io/
