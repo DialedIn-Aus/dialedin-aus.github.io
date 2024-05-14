@@ -91,10 +91,10 @@ You then can use the contents of this yaml file added to your new device, to bui
 https://raw.githubusercontent.com/esphome/firmware/main/bluetooth-proxy/wt32-eth01.yaml
 
 ### Advanced ESPHome Build
-ESPHome BT Proxy can also be using the standalone ESPHome CLI build:  
+ESPHome BT Proxy can also be built using the standalone ESPHome CLI, build with:  
 This requires Docker, [esptool][2] and the [yaml config][1]:
 
-```
+```bash
 # Pull docker image
 docker pull ghcr.io/esphome/esphome
 
